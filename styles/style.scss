@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.title {
+    padding:120px 0 80px 0;
+    text-align: center;
+}
+
+.grid-first {
+
+		&__cards {
+		}
+
+		&__card {
+		}
+}
+
+.grid-second {
+
+		&__cards {
+		}
+
+		&__card {
+		}
+}
+.grid-third {
+
+		&__cards {
+		}
+
+		&__card {
+		}
+}
