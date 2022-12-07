@@ -1,7 +1,31 @@
+@font-face {
+  font-family: "DeliusUnicase-Regular-400";
+  src: url(/fonts/DeliusUnicase-Regular.ttf);
+}
+@font-face {
+  font-family: "Roboto-Medium-500";
+  src: url(/fonts/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: "Roboto-Regular-400";
+  src: url(/fonts/Roboto-Regular.ttf);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+img:hover {
+  transform: scale(1.07);
 }
 
 .container {
@@ -12,4 +36,135 @@
 .title {
   padding: 120px 0 80px 0;
   text-align: center;
+  font-family: "DeliusUnicase-Regular-400";
+}
+
+.like {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+  background-image: url(/img/like.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transform: translateY(-150%);
+  transition: transform 0.5s ease-in-out;
+}
+.like:hover {
+  transform: translateY(0);
+  background-size: 60%;
+}
+
+.download {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #fff;
+  background-image: url(/img/download.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transform: translateY(-150%);
+  transition: transform 0.5s ease-in-out;
+}
+.download:hover {
+  transform: translateY(0);
+  background-size: 60%;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.card:hover .like {
+  transform: translateY(0);
+}
+.card:hover .download {
+  transform: translateY(0);
+}
+
+.cardSubTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: calc((1rem + 20px) * -1);
+  padding: 0 20px;
+  color: white;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+  text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8, -3px 0px 5px #000000;
+}
+
+.cardSubTitle-author {
+  font-family: "Roboto-Medium-500";
+  color: #fff;
+}
+
+.cardSubTitle-date {
+  font-family: "Roboto-Regular-400";
+  color: #E0E0E0;
+}
+
+.grid-first__cards {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 370px 370px 370px;
+}
+.grid-first__card:nth-child(4n+1) {
+  grid-column: 1/2;
+}
+.grid-first__card:nth-child(4n+2) {
+  grid-column: 2/4;
+}
+.grid-first__card:nth-child(4n+3) {
+  grid-column: 1/3;
+}
+.grid-first__card:nth-child(4n+4) {
+  grid-column: 3/4;
+}
+
+.grid-second__cards {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 370px);
+}
+.grid-second__card_double-double {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.grid-second__card_double-vertical {
+  grid-row: span 2;
+}
+.grid-second__card_double-horizontal {
+  grid-column: span 2;
+}
+
+.grid-third {
+  padding-bottom: 120px;
+}
+.grid-third__cards {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(5, 370px);
+}
+.grid-third__card_double-vertical {
+  grid-row: span 2;
+}
+.grid-third__card_double-horizontal {
+  grid-column: span 2;
 }/*# sourceMappingURL=style.css.map */
